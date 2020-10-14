@@ -4,6 +4,7 @@
   "description": "Api de aprendizaje que pretende ser la central de aplicaciones futuras.",
   "main": "index.js",
   "scripts": {
+    "script": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Oswall Moena",
