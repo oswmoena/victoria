@@ -16,6 +16,6 @@ let urlDB;
 // if( process.env.NODE_ENV === 'dev') {
 //     urlDB = 'mongodb://localhost:27017/central'
 // } else {
-    urlDB = 'mongodb+srv://omoena:4i6gk6vQdlxb0teh@cluster0.9mafw.mongodb.net/cafe';
+    urlDB = 'mongodb+srv://omoena:4i6gk6vQdlxb0teh@cluster0.9mafw.mongodb.net/phone-manager';
 // }
 process.env.URLDB = urlDB;

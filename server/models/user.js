@@ -39,6 +39,10 @@ let userSchema = new Schema({
         type: Boolean,
         default: false,
     },
+    phone: {
+        type: Number,
+        required: [true, 'El telefono es requerido'],
+    }
 });
 
 userSchema.methods.toJSON = function() {

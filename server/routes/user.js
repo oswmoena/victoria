@@ -41,7 +41,6 @@ app.delete('/user/:id', function (req, res) {
 })
 
 app.post('/user', (req, res) => {
-    console.log("hola!", req.body.name);
     let body = req.body;
 
     let user = new User({
@@ -49,6 +48,7 @@ app.post('/user', (req, res) => {
         email: body.email,
         password: bcrypt.hashSync(body.password, 10),
         role: body.role,
+        phone: body.phone
     });
 
     user.save((err, userDB) => {
@@ -72,7 +72,8 @@ app.get('/user', function (req, res) {
     let per = req.query.per || 5;
     per = Number(per);
 
-    User.find({state:true}, 'nombre email role') //el segundo argumento es de los campos que quiero retornar, vacio para traer todo
+//    User.find({state:true}, 'name email phone') //el segundo argumento es de los campos que quiero retornar, vacio para traer todo
+    User.find({state:true}) //el segundo argumento es de los campos que quiero retornar, vacio para traer todo
         .skip(from) //el salto de registros
         .limit(per) //el limite de registros
         .exec((err, users) => {
