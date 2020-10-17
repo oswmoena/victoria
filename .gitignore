@@ -1,0 +1,4 @@
+/node_modules
+/server/config/config.js
+yarn.lock
+package-lock.json
